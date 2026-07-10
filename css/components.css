@@ -1,0 +1,155 @@
+/* ==========================================================================
+   COMPONENTES REUTILIZÁVEIS
+   ========================================================================== */
+
+/* ---- Botões ---- */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xs);
+  padding: 1rem 2.25rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  font-weight: 600;
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: transform var(--dur-fast) var(--ease-out-soft),
+              box-shadow var(--dur-fast) var(--ease-out-soft),
+              background var(--dur-fast) var(--ease-out-soft),
+              border-color var(--dur-fast) var(--ease-out-soft);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.btn:active { transform: translateY(1px) scale(0.99); }
+
+.btn--gold {
+  background: var(--grad-gold);
+  color: var(--c-navy-950);
+  box-shadow: var(--shadow-gold-glow);
+}
+
+.btn--gold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.55) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform var(--dur-slow) var(--ease-premium);
+  z-index: 1;
+}
+
+.btn--gold:hover::before { transform: translateX(120%); }
+
+.btn--gold:hover {
+  box-shadow: 0 10px 50px -6px rgba(201, 157, 91, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+}
+
+.btn--ghost:hover {
+  border-color: var(--accent);
+  background: rgba(201, 157, 91, 0.08);
+  transform: translateY(-2px);
+}
+
+.btn--sm { padding: 0.75rem 1.5rem; font-size: 0.75rem; }
+.btn--block { width: 100%; }
+
+/* ---- Badge / Pill ---- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-pill);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-gold);
+}
+
+.badge__dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--c-gold-500);
+  box-shadow: 0 0 8px 2px rgba(201,157,91,0.7);
+}
+
+/* ---- Painel de vidro ---- */
+.glass-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-lg);
+}
+
+/* ---- Divisor ornamental ---- */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  color: var(--c-gold-500);
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--c-gold-700));
+}
+
+.ornament-divider::after { background: linear-gradient(90deg, var(--c-gold-700), transparent); }
+
+/* ---- Indicadores de confiança (hero) ---- */
+.trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--fs-body-sm);
+  color: var(--text-secondary);
+}
+
+.trust-item svg {
+  width: 18px; height: 18px;
+  color: var(--c-gold-500);
+  flex-shrink: 0;
+}
+
+/* ---- Card base ---- */
+.card {
+  background: var(--grad-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: transform var(--dur-mid) var(--ease-premium),
+              border-color var(--dur-mid) var(--ease-premium),
+              box-shadow var(--dur-mid) var(--ease-premium);
+}
+
+.card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lift);
+}

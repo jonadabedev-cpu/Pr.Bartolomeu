@@ -1,0 +1,115 @@
+/* ==========================================================================
+   SISTEMA DE ANIMAÇÕES — data-anim
+   Controlado via Intersection Observer em js/animations.js.
+   Cada elemento com [data-anim] inicia oculto e revela ao entrar em viewport.
+   ========================================================================== */
+
+[data-anim] {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition:
+    opacity 900ms var(--ease-premium),
+    transform 900ms var(--ease-premium),
+    filter 900ms var(--ease-premium);
+}
+
+[data-anim].is-visible { opacity: 1; }
+
+/* ---- Variantes ---- */
+[data-anim="fade-up"] { transform: translateY(28px); }
+[data-anim="fade-up"].is-visible { transform: translateY(0); }
+
+[data-anim="fade-down"] { transform: translateY(-28px); }
+[data-anim="fade-down"].is-visible { transform: translateY(0); }
+
+[data-anim="fade-left"] { transform: translateX(32px); }
+[data-anim="fade-left"].is-visible { transform: translateX(0); }
+
+[data-anim="fade-right"] { transform: translateX(-32px); }
+[data-anim="fade-right"].is-visible { transform: translateX(0); }
+
+[data-anim="scale-in"] { transform: scale(0.92); }
+[data-anim="scale-in"].is-visible { transform: scale(1); }
+
+[data-anim="blur-in"] { filter: blur(10px); transform: translateY(16px); }
+[data-anim="blur-in"].is-visible { filter: blur(0); transform: translateY(0); }
+
+/* ---- Atraso escalonado (stagger) via variável inline --d ---- */
+[data-anim] { transition-delay: var(--d, 0ms); }
+
+/* ==========================================================================
+   KEYFRAMES DECORATIVOS
+   ========================================================================== */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+.is-floating { animation: float 6s ease-in-out infinite; }
+.is-floating--slow { animation: float 9s ease-in-out infinite; }
+.is-floating--delay { animation-delay: 1.4s; }
+
+@keyframes shine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.is-shining {
+  background-image: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.5) 50%, transparent 70%);
+  background-size: 200% 100%;
+  animation: shine 3.5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.06); }
+}
+
+.is-glowing { animation: pulseGlow 4s ease-in-out infinite; }
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hero__badge, .hero__title, .hero__subtitle, .hero__actions, .hero__trust {
+  animation: fadeInScale 1s var(--ease-premium) both;
+}
+.hero__badge { animation-delay: 0.1s; }
+.hero__title { animation-delay: 0.25s; }
+.hero__subtitle { animation-delay: 0.4s; }
+.hero__actions { animation-delay: 0.55s; }
+.hero__trust { animation-delay: 0.7s; }
+
+@keyframes ambientRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hero__emblem-ring {
+  animation: ambientRotate 40s linear infinite;
+  transform-origin: center;
+}
+
+/* Cursor glow para mouse tracking premium (posicionado via JS) */
+.mouse-glow {
+  position: fixed;
+  top: 0; left: 0;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,157,91,0.10) 0%, transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: opacity 300ms ease;
+  opacity: 0;
+}
+
+.mouse-glow.is-active { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-anim] { opacity: 1 !important; transform: none !important; filter: none !important; }
+  .is-floating, .is-floating--slow, .is-shining, .is-glowing, .hero__emblem-ring { animation: none !important; }
+  .hero__badge, .hero__title, .hero__subtitle, .hero__actions, .hero__trust { animation: none !important; opacity: 1; }
+}

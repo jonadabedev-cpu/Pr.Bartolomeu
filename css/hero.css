@@ -1,0 +1,148 @@
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.hero__video {
+  position: absolute;
+  top: 50%; left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto; height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: saturate(0.85) brightness(0.62) blur(0.4px);
+}
+
+.hero__media::before {
+  /* overlay para legibilidade */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(80% 60% at 50% 15%, rgba(6,13,24,0.35) 0%, rgba(6,13,24,0.86) 60%, rgba(6,13,24,0.97) 100%),
+    linear-gradient(180deg, rgba(6,13,24,0.55) 0%, rgba(6,13,24,0.55) 40%, var(--c-navy-950) 100%);
+}
+
+.hero__media::after {
+  /* textura de grão sutil para sensação cinematográfica */
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding-top: calc(var(--space-3xl) + 2rem);
+  padding-bottom: var(--space-2xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__badge { margin-bottom: var(--space-lg); }
+
+.hero__title {
+  font-size: var(--fs-display-xl);
+  max-width: 16ch;
+  margin-bottom: var(--space-md);
+  text-wrap: balance;
+}
+
+.hero__subtitle {
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+  max-width: 56ch;
+  margin-bottom: var(--space-lg);
+  line-height: var(--lh-relaxed);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.hero__trust {
+  justify-content: center;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-subtle);
+  width: 100%;
+  max-width: 780px;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xs);
+  color: var(--text-muted);
+  font-size: 0.625rem;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.hero__scroll-track {
+  width: 1px;
+  height: 40px;
+  background: var(--border-strong);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__scroll-track::after {
+  content: "";
+  position: absolute;
+  top: -100%; left: 0;
+  width: 100%; height: 100%;
+  background: var(--c-gold-500);
+  animation: scrollDrip 2.2s var(--ease-premium) infinite;
+}
+
+@keyframes scrollDrip {
+  0% { top: -100%; }
+  60% { top: 100%; }
+  100% { top: 100%; }
+}
+
+/* Elemento 3D flutuante — símbolo minimalista da cruz + glow */
+.hero__emblem {
+  position: absolute;
+  top: 14%;
+  right: 8%;
+  width: clamp(90px, 10vw, 160px);
+  opacity: 0.9;
+  z-index: 0;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+}
+
+@media (max-width: 900px) {
+  .hero__emblem { display: none; }
+}
