@@ -227,11 +227,10 @@
 
 .experience__visual .book-3d { width: 55%; }
 
-/* ---- Visual 3D via Spline (substitui a Bíblia SVG) ----
-   Embed gratuito via iframe (Public URL). Como o iframe carrega uma página
-   separada, não existe transparência real — por isso o fundo da cena deve
-   ser configurado no editor Spline com a MESMA cor do --bg-surface-alt do
-   site (#060d18), fazendo o retângulo se fundir com a página. */
+/* ---- Visual 3D via Three.js (substitui a Bíblia SVG / iframe Spline) ----
+   Renderer com fundo transparente (alpha:true no JS) — o degradê e o glow
+   dourado abaixo aparecem por trás do anjo 3D naturalmente, sem truques
+   de cor sólida nem dependência de serviços externos. */
 .experience__visual--spline {
   background: var(--grad-surface);
 }
@@ -247,13 +246,17 @@
   z-index: 0;
 }
 
-.experience__visual--spline iframe {
+.angel3d {
   position: relative;
   z-index: 1;
   width: 100%;
   height: 100%;
-  border: none;
-  background: transparent;
+}
+
+.angel3d canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .experience__list { display: flex; flex-direction: column; gap: var(--space-lg); }

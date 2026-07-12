@@ -68,7 +68,7 @@
 <section class="hero">
   <div class="hero__media">
     <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/reference.jpeg">
-      <source src="/assent/videos/WhatsApp Video 2026-07-10 at 16.25.49 (1).mp4" type="video/mp4">
+      <source src="assets/video/hero-bg.mp4" type="video/mp4">
     </video>
   </div>
 
@@ -295,22 +295,10 @@
   <div class="u-container">
     <div class="experience__layout">
       <div class="experience__visual experience__visual--spline" data-anim="scale-in">
-        <!-- Elemento 3D — Anjo (Spline Design), via Public URL (plano gratuito)
-             1. Substitua a URL abaixo pela "Public URL" da sua cena no Spline
-                (Export → Public URL → copiar link). Veja as instruções enviadas
-                junto com este código.
-             2. Antes de exportar, defina a cor de fundo da cena em Scene
-                Settings → Background como #060d18 (mesma cor do fundo do site),
-                assim o retângulo do iframe se funde com a página em vez de
-                aparecer preto. -->
-        <iframe
-          src=""
-          title="Elemento 3D — Anjo"
-          frameborder="0"
-          loading="lazy"
-          allow="autoplay; fullscreen"
-          allowfullscreen>
-        </iframe>
+        <!-- Elemento 3D — Anjo estilizado (halo + asas + núcleo de luz),
+             construído com Three.js e renderizado com fundo transparente,
+             sem depender de serviços externos, contas ou marcas d'água. -->
+        <div id="angel3d" class="angel3d" role="img" aria-label="Elemento decorativo 3D de um anjo dourado"></div>
       </div>
 
       <div>
@@ -378,7 +366,7 @@
           <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Certificado de conclusão</div>
           <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Material complementar</div>
         </div>
-        <a href="https://hotmart.com/pt-br/marketplace/produtos/curso-intensivo-da-biblia-individual-parcelado-em-10x/X106672579I" class="btn btn--ghost btn--block">Comprar pela Hotmart</a>
+        <a href="#" class="btn btn--ghost btn--block">Comprar pela Hotmart</a>
       </div>
 
       <div class="plan card plan--featured" data-anim="fade-up">
@@ -394,7 +382,7 @@
           <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Material complementar</div>
           <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Economize em relação ao parcelado</div>
         </div>
-        <a href="https://hotmart.com/pt-br/marketplace/produtos/curso-intensivo-da-biblia-individual-a-vista/M106674670S" class="btn btn--gold btn--block">Comprar pela Hotmart</a>
+        <a href="#" class="btn btn--gold btn--block">Comprar pela Hotmart</a>
       </div>
 
       <div class="plan card" data-anim="fade-up">
@@ -409,7 +397,7 @@
           <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Acesso vitalício ao conteúdo</div>
           <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Certificados individuais</div>
         </div>
-        <a href="https://hotmart.com/pt-br/marketplace/produtos/curso-intensivo-da-biblia-casal-parcelado-em-10x/R106674489T" class="btn btn--ghost btn--block">Comprar pela Hotmart</a>
+        <a href="#" class="btn btn--ghost btn--block">Comprar pela Hotmart</a>
       </div>
 
       <div class="plan card" data-anim="fade-up">
@@ -424,7 +412,7 @@
           <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Acesso vitalício ao conteúdo</div>
           <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Maior economia total</div>
         </div>
-        <a href="https://hotmart.com/pt-br/marketplace/produtos/casal-a-vista/T106675104K" class="btn btn--ghost btn--block">Comprar pela Hotmart</a>
+        <a href="#" class="btn btn--ghost btn--block">Comprar pela Hotmart</a>
       </div>
     </div>
   </div>
@@ -554,5 +542,7 @@
 
 <script src="js/animations.js"></script>
 <script src="js/main.js"></script>
+<script src="js/vendor/three.min.js"></script>
+<script src="js/angel-3d.js"></script>
 </body>
 </html>
