@@ -1,550 +1,702 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curso Intensivo da Bíblia — Método Kairós® | Pastor Bartolomeu</title>
-<meta name="description" content="O Curso Intensivo da Bíblia baseado no Método Kairós® conduz você ao conhecimento, interpretação e aplicação profunda das Escrituras. Inscrições abertas — vagas limitadas.">
-<meta name="theme-color" content="#060d18">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso Intensivo da Bíblia — Método Kairós® | Pastor Bartolomeu</title>
+  <meta name="description"
+    content="O Curso Intensivo da Bíblia baseado no Método Kairós® conduz você ao conhecimento, interpretação e aplicação profunda das Escrituras. Inscrições abertas — vagas limitadas.">
+  <meta name="theme-color" content="#060d18">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Curso Intensivo da Bíblia — Método Kairós®">
-<meta property="og:description" content="Conheça profundamente a Palavra de Deus. Ensino sólido, compreensão clara e transformação de vida.">
-<meta property="og:type" content="website">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Curso Intensivo da Bíblia — Método Kairós®">
+  <meta property="og:description"
+    content="Conheça profundamente a Palavra de Deus. Ensino sólido, compreensão clara e transformação de vida.">
+  <meta property="og:type" content="website">
 
-<!-- Preconnect para performance de fontes -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Preconnect para performance de fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-<!-- Folhas de estilo — carregadas em ordem de cascata intencional -->
-<link rel="stylesheet" href="/css/variables.css">
-<link rel="stylesheet" href="/css/reset.css">
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/components.css">
-<link rel="stylesheet" href="/css/nav.css">
-<link rel="stylesheet" href="/css/hero.css">
-<link rel="stylesheet" href="/css/sections.css">
-<link rel="stylesheet" href="css/animations.css">
+  <!-- Folhas de estilo — carregadas em ordem de cascata intencional -->
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/hero.css">
+  <link rel="stylesheet" href="/css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
+
 <body>
 
-<!-- Pular para conteúdo — acessibilidade -->
-<a href="#inicio" class="u-visually-hidden">Pular para o conteúdo principal</a>
+  <!-- Pular para conteúdo — acessibilidade -->
+  <a href="#inicio" class="u-visually-hidden">Pular para o conteúdo principal</a>
 
-<!-- ==========================================================================
+  <!-- ==========================================================================
      NAVEGAÇÃO
      ========================================================================== -->
-<header class="nav" id="nav">
-  <div class="u-container nav__inner">
-    <a href="#inicio" class="nav__brand">
-      <span class="nav__brand-mark">Kairós<sup style="font-size:0.5em;">®</sup></span>
-      <span class="nav__brand-tag">Curso Intensivo da Bíblia</span>
-    </a>
+  <header class="nav" id="nav">
+    <div class="u-container nav__inner">
+      <a href="#inicio" class="nav__brand">
+        <span class="nav__brand-mark">Kairós<sup style="font-size:0.5em;">®</sup></span>
+        <span class="nav__brand-tag">Curso Intensivo da Bíblia</span>
+      </a>
 
-    <nav class="nav__links" id="navLinks" aria-label="Navegação principal">
-      <a href="sobre.html" class="nav__link">O Pastor</a>
-      <a href="#metodo" class="nav__link">O Método</a>
-      <a href="#como-funciona" class="nav__link">Como Funciona</a>
-      <a href="#aprendizado" class="nav__link">Conteúdo</a>
-      <a href="#planos" class="nav__link">Planos</a>
-      <a href="#faq" class="nav__link">Dúvidas</a>
-    </nav>
+      <nav class="nav__links" id="navLinks" aria-label="Navegação principal">
+        <a href="sobre.html" class="nav__link">Pastor</a>
+        <a href="#metodo" class="nav__link">Método</a>
+        <a href="#como-funciona" class="nav__link">Como Funciona</a>
+        <a href="#aprendizado" class="nav__link">Conteúdo</a>
+        <a href="#planos" class="nav__link">Planos</a>
+        <a href="#faq" class="nav__link">Dúvidas</a>
+      </nav>
 
-    <div class="nav__actions">
-      <a href="#planos" class="btn btn--ghost btn--sm">Conhecer os planos</a>
-      <a href="#planos" class="btn btn--gold btn--sm">Quero começar</a>
-      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav__actions">
+        <a href="#planos" class="btn btn--ghost btn--sm">Conhecer os planos</a>
+        <a href="#planos" class="btn btn--gold btn--sm">Quero começar</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false"
+          aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main id="inicio">
+  <main id="inicio">
 
-<!-- ==========================================================================
+    <!-- ==========================================================================
      HERO
      ========================================================================== -->
-<section class="hero">
-  <div class="hero__media">
-    <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/reference.jpeg">
-      <source src="/assent/videos/lv_0_20260710162515 (1).mp4 type="video/mp4">
-    </video>
-  </div>
+    <section class="hero">
+      <div class="hero__media">
+        <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/reference.jpeg">
+          <source src="/assent/videos/lv_0_20260710162515 (1).mp4" type="video/mp4">
+        </video>
+      </div>
 
-  <!-- Emblema 3D minimalista — cruz com anel de luz -->
-  <svg class="hero__emblem is-floating" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs>
-      <linearGradient id="crossGrad" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#f3e3c2"/>
-        <stop offset="50%" stop-color="#c99d5b"/>
-        <stop offset="100%" stop-color="#9c7638"/>
-      </linearGradient>
-    </defs>
-    <circle class="hero__emblem-ring" cx="80" cy="80" r="70" stroke="url(#crossGrad)" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="2 8"/>
-    <circle cx="80" cy="80" r="54" stroke="url(#crossGrad)" stroke-opacity="0.35" stroke-width="1"/>
-    <g filter="url(#softShadow)">
-      <rect x="74" y="40" width="12" height="80" rx="4" fill="url(#crossGrad)"/>
-      <rect x="48" y="58" width="64" height="12" rx="4" fill="url(#crossGrad)"/>
-    </g>
-    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#c99d5b" flood-opacity="0.35"/>
-    </filter>
-  </svg>
+      <!-- Emblema 3D minimalista — cruz com anel de luz -->
+      <svg class="hero__emblem is-floating" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <defs>
+          <linearGradient id="crossGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f3e3c2" />
+            <stop offset="50%" stop-color="#c99d5b" />
+            <stop offset="100%" stop-color="#9c7638" />
+          </linearGradient>
+        </defs>
+        <circle class="hero__emblem-ring" cx="80" cy="80" r="70" stroke="url(#crossGrad)" stroke-opacity="0.25"
+          stroke-width="1" stroke-dasharray="2 8" />
+        <circle cx="80" cy="80" r="54" stroke="url(#crossGrad)" stroke-opacity="0.35" stroke-width="1" />
+        <g filter="url(#softShadow)">
+          <rect x="74" y="40" width="12" height="80" rx="4" fill="url(#crossGrad)" />
+          <rect x="48" y="58" width="64" height="12" rx="4" fill="url(#crossGrad)" />
+        </g>
+        <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#c99d5b" flood-opacity="0.35" />
+        </filter>
+      </svg>
 
-  <div class="hero__content u-container">
-    <div class="hero__badge">
-      <span class="badge"><span class="badge__dot"></span>Método Kairós®</span>
-    </div>
+      <div class="hero__content u-container">
+        <div class="hero__badge">
+          <span class="badge"><span class="badge__dot"></span>Método Kairós®</span>
+        </div>
 
-    <h1 class="hero__title">Conheça profundamente a <span class="u-gold-text">Palavra de Deus</span></h1>
+        <h1 class="hero__title">Conheça profundamente a <span class="u-gold-text">Palavra de Deus</span></h1>
 
-    <p class="hero__subtitle">
-      O Curso Intensivo da Bíblia baseado no Método Kairós® foi desenvolvido para conduzir
-      você ao conhecimento, interpretação e aplicação das Escrituras de forma profunda,
-      prática e transformadora.
-    </p>
+        <p class="hero__subtitle">
+          O Curso Intensivo da Bíblia baseado no Método Kairós® foi desenvolvido para conduzir
+          você ao conhecimento, interpretação e aplicação das Escrituras de forma profunda,
+          prática e transformadora.
+        </p>
 
-    <div class="hero__actions">
-      <a href="#planos" class="btn btn--gold">Quero começar</a>
-      <a href="#planos" class="btn btn--ghost">Conhecer os planos</a>
-    </div>
+        <div class="hero__actions">
+          <a href="#planos" class="btn btn--gold">Quero começar</a>
+          <a href="#planos" class="btn btn--ghost">Conhecer os planos</a>
+        </div>
 
-    <div class="trust-strip hero__trust">
-      <span class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20a5 5 0 0 0-10 0M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8 0a3.5 3.5 0 0 0-3-3.46M4 13a3.5 3.5 0 0 1 3-3.46" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        + de 12 mil alunos
-      </span>
-      <span class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9" stroke-linecap="round"/><path d="M8 12.5 10.5 15 16 9" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        100% Online
-      </span>
-      <span class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M8 3v6M16 3v6" stroke-linecap="round"/></svg>
-        Acesso pela Hotmart
-      </span>
-      <span class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="5"/><path d="M8.5 13 7 21l5-2.5L17 21l-1.5-8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Certificado incluso
-      </span>
-    </div>
-  </div>
+        <div class="trust-strip hero__trust">
+          <span class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M17 20a5 5 0 0 0-10 0M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8 0a3.5 3.5 0 0 0-3-3.46M4 13a3.5 3.5 0 0 1 3-3.46"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            + de 12 mil alunos
+          </span>
+          <span class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="9" stroke-linecap="round" />
+              <path d="M8 12.5 10.5 15 16 9" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            100% Online
+          </span>
+          <span class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="6" width="18" height="14" rx="2" />
+              <path d="M3 10h18M8 3v6M16 3v6" stroke-linecap="round" />
+            </svg>
+            Acesso pela Hotmart
+          </span>
+        </div>
+      </div>
 
-  <a href="#metodo" class="hero__scroll" aria-label="Rolar para a próxima seção">
-    <span>Explore</span>
-    <span class="hero__scroll-track"></span>
-  </a>
-</section>
+      <a href="#metodo" class="hero__scroll" aria-label="Rolar para a próxima seção">
+        <span>Explore</span>
+        <span class="hero__scroll-track"></span>
+      </a>
+    </section>
 
-<!-- ==========================================================================
+    <!-- ==========================================================================
      SOBRE O MÉTODO — TIMELINE
      ========================================================================== -->
-<section class="method u-section" id="metodo">
-  <div class="u-container">
-    <div class="u-section-head u-section-head--center" data-anim="fade-up">
-      <span class="u-eyebrow">O Método</span>
-      <h2 class="u-heading-lg">Uma jornada estruturada até a transformação</h2>
-      <p class="u-lede" style="margin-inline:auto;">
-        O Método Kairós® não é apenas um curso — é um caminho progressivo que conduz
-        o aluno da leitura superficial à vivência prática da Palavra.
-      </p>
-    </div>
-
-    <div class="method__timeline" data-anim-group="110">
-      <div class="method__step" data-anim="fade-up">
-        <div class="method__step-marker">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13ZM20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z" stroke-linejoin="round"/></svg>
+    <section class="method u-section" id="metodo">
+      <div class="u-container">
+        <div class="u-section-head u-section-head--center" data-anim="fade-up">
+          <span class="u-eyebrow">O Método</span>
+          <h2 class="u-heading-lg">Uma jornada estruturada até a transformação</h2>
+          <p class="u-lede" style="margin-inline:auto;">
+            O Método Kairós® não é apenas um curso — é um caminho progressivo que conduz
+            o aluno da leitura superficial à vivência prática da Palavra.
+          </p>
         </div>
-        <h3 class="method__step-title">01. Conhecer</h3>
-        <p class="method__step-desc">Contato inicial com o texto sagrado em seu contexto histórico e cultural original.</p>
-      </div>
 
-      <div class="method__step" data-anim="fade-up">
-        <div class="method__step-marker">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21 16.65 16.65" stroke-linecap="round"/></svg>
+        <div class="method__timeline" data-anim-group="110">
+          <div class="method__step" data-anim="fade-up">
+            <div class="method__step-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13ZM20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="method__step-title">01. Conhecer</h3>
+            <p class="method__step-desc">Contato inicial com o texto sagrado em seu contexto histórico e cultural
+              original.</p>
+          </div>
+
+          <div class="method__step" data-anim="fade-up">
+            <div class="method__step-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="11" cy="11" r="7" />
+                <path d="M21 21 16.65 16.65" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="method__step-title">02. Compreender</h3>
+            <p class="method__step-desc">Aprofundamento no significado literal e teológico de cada passagem estudada.
+            </p>
+          </div>
+
+          <div class="method__step" data-anim="fade-up">
+            <div class="method__step-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 3v18M5 8l7-5 7 5M5 8v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="method__step-title">03. Interpretar</h3>
+            <p class="method__step-desc">Ferramentas hermenêuticas sólidas para extrair sentido com responsabilidade.
+            </p>
+          </div>
+
+          <div class="method__step" data-anim="fade-up">
+            <div class="method__step-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z" stroke-linejoin="round" />
+                <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="method__step-title">04. Aplicar</h3>
+            <p class="method__step-desc">Conexão direta entre o texto bíblico e os desafios reais da vida cristã.</p>
+          </div>
+
+          <div class="method__step" data-anim="fade-up">
+            <div class="method__step-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"
+                  stroke-linecap="round" />
+                <circle cx="12" cy="12" r="3.5" />
+              </svg>
+            </div>
+            <h3 class="method__step-title">05. Transformar</h3>
+            <p class="method__step-desc">O conhecimento se torna caráter — o fruto final de todo o percurso.</p>
+          </div>
         </div>
-        <h3 class="method__step-title">02. Compreender</h3>
-        <p class="method__step-desc">Aprofundamento no significado literal e teológico de cada passagem estudada.</p>
       </div>
+    </section>
 
-      <div class="method__step" data-anim="fade-up">
-        <div class="method__step-marker">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M5 8l7-5 7 5M5 8v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3 class="method__step-title">03. Interpretar</h3>
-        <p class="method__step-desc">Ferramentas hermenêuticas sólidas para extrair sentido com responsabilidade.</p>
-      </div>
-
-      <div class="method__step" data-anim="fade-up">
-        <div class="method__step-marker">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3 class="method__step-title">04. Aplicar</h3>
-        <p class="method__step-desc">Conexão direta entre o texto bíblico e os desafios reais da vida cristã.</p>
-      </div>
-
-      <div class="method__step" data-anim="fade-up">
-        <div class="method__step-marker">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5"/></svg>
-        </div>
-        <h3 class="method__step-title">05. Transformar</h3>
-        <p class="method__step-desc">O conhecimento se torna caráter — o fruto final de todo o percurso.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==========================================================================
+    <!-- ==========================================================================
      COMO FUNCIONA
      ========================================================================== -->
-<section class="how u-section" id="como-funciona">
-  <div class="u-container">
-    <div class="u-section-head u-section-head--center" data-anim="fade-up">
-      <span class="u-eyebrow">Como Funciona</span>
-      <h2 class="u-heading-lg">Do clique à transformação, em quatro passos</h2>
-    </div>
+    <section class="how u-section" id="como-funciona">
+      <div class="u-container">
+        <div class="u-section-head u-section-head--center" data-anim="fade-up">
+          <span class="u-eyebrow">Como Funciona</span>
+          <h2 class="u-heading-lg">Do clique à transformação, em quatro passos</h2>
+        </div>
 
-    <div class="how__grid" data-anim-group="100">
-      <div class="how__connector" aria-hidden="true"></div>
+        <div class="how__grid" data-anim-group="100">
+          <div class="how__connector" aria-hidden="true"></div>
 
-      <div class="how__card card" data-anim="fade-up">
-        <span class="how__num">01</span>
-        <h3>Inscreva-se</h3>
-        <p>Garanta sua vaga em poucos minutos, com pagamento seguro e imediato.</p>
+          <div class="how__card card" data-anim="fade-up">
+            <span class="how__num">01</span>
+            <h3>Inscreva-se</h3>
+            <p>Garanta sua vaga em poucos minutos, com pagamento seguro e imediato.</p>
+          </div>
+
+          <div class="how__card card" data-anim="fade-up">
+            <span class="how__num">02</span>
+            <h3>Receba acesso pela Hotmart</h3>
+            <p>Seu login chega por e-mail assim que a compra é confirmada.</p>
+          </div>
+
+          <div class="how__card card" data-anim="fade-up">
+            <span class="how__num">03</span>
+            <h3>Assista às aulas</h3>
+            <p>Estude no seu ritmo, com aulas gravadas em alta qualidade.</p>
+          </div>
+
+          <div class="how__card card" data-anim="fade-up">
+            <span class="how__num">04</span>
+            <h3>Transforme seu conhecimento</h3>
+            <p>Aplique o que aprendeu e viva uma fé mais sólida e consciente.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="how__card card" data-anim="fade-up">
-        <span class="how__num">02</span>
-        <h3>Receba acesso pela Hotmart</h3>
-        <p>Seu login chega por e-mail assim que a compra é confirmada.</p>
-      </div>
-
-      <div class="how__card card" data-anim="fade-up">
-        <span class="how__num">03</span>
-        <h3>Assista às aulas</h3>
-        <p>Estude no seu ritmo, com aulas gravadas em alta qualidade.</p>
-      </div>
-
-      <div class="how__card card" data-anim="fade-up">
-        <span class="how__num">04</span>
-        <h3>Transforme seu conhecimento</h3>
-        <p>Aplique o que aprendeu e viva uma fé mais sólida e consciente.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==========================================================================
+    <!-- ==========================================================================
      O QUE VOCÊ VAI APRENDER
      ========================================================================== -->
-<section class="learn u-section" id="aprendizado">
-  <div class="u-container">
-    <div class="u-section-head u-section-head--center" data-anim="fade-up">
-      <span class="u-eyebrow">Conteúdo Programático</span>
-      <h2 class="u-heading-lg">O que você vai aprender</h2>
-      <p class="u-lede" style="margin-inline:auto;">
-        Um currículo completo, construído para levar você da introdução às Escrituras
-        até a leitura madura e aplicada do texto sagrado.
-      </p>
-    </div>
+    <section class="learn u-section" id="aprendizado">
+      <div class="u-container">
+        <div class="u-section-head u-section-head--center" data-anim="fade-up">
+          <span class="u-eyebrow">Conteúdo Programático</span>
+          <h2 class="u-heading-lg">O que você vai aprender</h2>
+          <p class="u-lede" style="margin-inline:auto;">
+            Um currículo completo, construído para levar você da introdução às Escrituras
+            até a leitura madura e aplicada do texto sagrado.
+          </p>
+        </div>
 
-    <div class="learn__grid" data-anim-group="90">
-      <div class="learn__card card" data-anim="fade-up">
-        <div class="learn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13ZM20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z" stroke-linejoin="round"/></svg></div>
-        <h3>Panorama Bíblico</h3>
-        <p>A estrutura completa da Bíblia, do Gênesis ao Apocalipse, com clareza histórica.</p>
+        <div class="learn__grid" data-anim-group="90">
+          <div class="learn__card card" data-anim="fade-up">
+            <div class="learn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13ZM20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z"
+                  stroke-linejoin="round" />
+              </svg></div>
+            <h3>Panorama Bíblico</h3>
+            <p>A estrutura completa da Bíblia, do Gênesis ao Apocalipse, com clareza histórica.</p>
+          </div>
+
+          <div class="learn__card card" data-anim="fade-up">
+            <div class="learn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z" stroke-linejoin="round" />
+              </svg></div>
+            <h3>Hermenêutica Aplicada</h3>
+            <p>Princípios sólidos de interpretação para ler o texto com fidelidade e profundidade.</p>
+          </div>
+
+          <div class="learn__card card" data-anim="fade-up">
+            <div class="learn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 12h4l3 8 4-16 3 8h4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></div>
+            <h3>Contexto Histórico</h3>
+            <p>Os cenários geográficos, culturais e políticos que moldaram cada livro bíblico.</p>
+          </div>
+
+          <div class="learn__card card" data-anim="fade-up">
+            <div class="learn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20 21a8 8 0 1 0-16 0M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></div>
+            <h3>Vidas e Personagens</h3>
+            <p>As jornadas de Moisés, Davi, Paulo e outras figuras centrais das Escrituras.</p>
+          </div>
+
+          <div class="learn__card card" data-anim="fade-up">
+            <div class="learn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 21c-4-3-8-6-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 5-4 8-8 11Z" stroke-linejoin="round" />
+              </svg></div>
+            <h3>Teologia Prática</h3>
+            <p>Como transformar doutrina em vivência real dentro da sua rotina de fé.</p>
+          </div>
+
+          <div class="learn__card card" data-anim="fade-up">
+            <div class="learn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 18V5l12-2v13M9 9l12-2M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM18 19a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                  stroke-linejoin="round" />
+              </svg></div>
+            <h3>Método de Estudo Pessoal</h3>
+            <p>Um sistema replicável para continuar estudando a Bíblia por conta própria.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="learn__card card" data-anim="fade-up">
-        <div class="learn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z" stroke-linejoin="round"/></svg></div>
-        <h3>Hermenêutica Aplicada</h3>
-        <p>Princípios sólidos de interpretação para ler o texto com fidelidade e profundidade.</p>
-      </div>
-
-      <div class="learn__card card" data-anim="fade-up">
-        <div class="learn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h4l3 8 4-16 3 8h4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>Contexto Histórico</h3>
-        <p>Os cenários geográficos, culturais e políticos que moldaram cada livro bíblico.</p>
-      </div>
-
-      <div class="learn__card card" data-anim="fade-up">
-        <div class="learn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21a8 8 0 1 0-16 0M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3>Vidas e Personagens</h3>
-        <p>As jornadas de Moisés, Davi, Paulo e outras figuras centrais das Escrituras.</p>
-      </div>
-
-      <div class="learn__card card" data-anim="fade-up">
-        <div class="learn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21c-4-3-8-6-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 5-4 8-8 11Z" stroke-linejoin="round"/></svg></div>
-        <h3>Teologia Prática</h3>
-        <p>Como transformar doutrina em vivência real dentro da sua rotina de fé.</p>
-      </div>
-
-      <div class="learn__card card" data-anim="fade-up">
-        <div class="learn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13M9 9l12-2M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM18 19a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke-linejoin="round"/></svg></div>
-        <h3>Método de Estudo Pessoal</h3>
-        <p>Um sistema replicável para continuar estudando a Bíblia por conta própria.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==========================================================================
+    <!-- ==========================================================================
      EXPERIÊNCIA DO CURSO
      ========================================================================== -->
-<section class="experience u-section">
+  <section class="experience u-section">
   <div class="u-container">
     <div class="experience__layout">
-      <div class="experience__visual experience__visual--spline" data-anim="scale-in">
-        <!-- Elemento 3D — Anjo estilizado (halo + asas + núcleo de luz),
-             construído com Three.js e renderizado com fundo transparente,
-             sem depender de serviços externos, contas ou marcas d'água. -->
-        <div id="angel3d" class="angel3d" role="img" aria-label="Elemento decorativo 3D de um anjo dourado"></div>
+      <div class="experience__visual experience__visual--image" data-anim="scale-in">
+        <!-- Imagem: cruz com luz celestial. Se depois você conseguir uma
+             versão em resolução maior da mesma imagem, é só trocar o
+             arquivo em assets/img/cruz-luz-biblia.png mantendo o mesmo nome. -->
+        <img
+          src="assent/img14.jpeg"
+          alt="Cruz iluminada por um feixe de luz celestial sobre nuvens douradas"
+          class="experience__image"
+          loading="lazy">
       </div>
+ 
 
-      <div>
-        <div class="u-section-head" data-anim="fade-up">
-          <span class="u-eyebrow">Experiência do Curso</span>
-          <h2 class="u-heading-lg">Tudo o que você precisa, em um só lugar</h2>
-        </div>
+          <div>
+            <div class="u-section-head" data-anim="fade-up">
+              <span class="u-eyebrow">Experiência do Curso</span>
+              <h2 class="u-heading-lg">Tudo o que você precisa, em um só lugar</h2>
+            </div>
 
-        <div class="experience__list" data-anim-group="90">
-          <div class="experience__item" data-anim="fade-up">
-            <div class="experience__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M10 9v6l5-3-5-3Z" fill="currentColor" stroke="none"/></svg></div>
-            <div><h3>Vídeo-aulas premium</h3><p>Conteúdo gravado em alta qualidade, com didática clara e objetiva.</p></div>
-          </div>
+            <div class="experience__list" data-anim-group="90">
+              <div class="experience__item" data-anim="fade-up">
+                <div class="experience__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.5">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M10 9v6l5-3-5-3Z" fill="currentColor" stroke="none" />
+                  </svg></div>
+                <div>
+                  <h3>Vídeo-aulas premium</h3>
+                  <p>Conteúdo gravado em alta qualidade, com didática clara e objetiva.</p>
+                </div>
+              </div>
 
-          <div class="experience__item" data-anim="fade-up">
-            <div class="experience__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13Z" stroke-linejoin="round"/></svg></div>
-            <div><h3>Material complementar</h3><p>Apostilas, resumos e roteiros de estudo para aprofundar cada tema.</p></div>
-          </div>
+              <div class="experience__item" data-anim="fade-up">
+                <div class="experience__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.5">
+                    <path
+                      d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13Z"
+                      stroke-linejoin="round" />
+                  </svg></div>
+                <div>
+                  <h3>Material complementar</h3>
+                  <p>Apostilas, resumos e roteiros de estudo para aprofundar cada tema.</p>
+                </div>
+              </div>
 
-          <div class="experience__item" data-anim="fade-up">
-            <div class="experience__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3" stroke-linecap="round"/><circle cx="12" cy="12" r="9"/></svg></div>
-            <div><h3>Acesso vitalício</h3><p>Estude no seu tempo e volte ao conteúdo sempre que precisar.</p></div>
-          </div>
+              <div class="experience__item" data-anim="fade-up">
+                <div class="experience__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.5">
+                    <path d="M12 8v4l3 3" stroke-linecap="round" />
+                    <circle cx="12" cy="12" r="9" />
+                  </svg></div>
+                <div>
+                  <h3>Acesso vitalício</h3>
+                  <p>Estude no seu tempo e volte ao conteúdo sempre que precisar.</p>
+                </div>
+              </div>
 
-          <div class="experience__item" data-anim="fade-up">
-            <div class="experience__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v18M4 3h16v18H4V3Z" stroke-linejoin="round"/></svg></div>
-            <div><h3>Estudos organizados</h3><p>Trilha lógica e progressiva, sem sobrecarga ou desordem de conteúdo.</p></div>
-          </div>
+              <div class="experience__item" data-anim="fade-up">
+                <div class="experience__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.5">
+                    <path d="M9 3v18M4 3h16v18H4V3Z" stroke-linejoin="round" />
+                  </svg></div>
+                <div>
+                  <h3>Estudos organizados</h3>
+                  <p>Trilha lógica e progressiva, sem sobrecarga ou desordem de conteúdo.</p>
+                </div>
+              </div>
 
-          <div class="experience__item" data-anim="fade-up">
-            <div class="experience__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div><h3>Aplicação prática</h3><p>Exercícios e reflexões que conectam teoria bíblica à vida real.</p></div>
-          </div>
+              <div class="experience__item" data-anim="fade-up">
+                <div class="experience__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.5">
+                    <path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z" stroke-linejoin="round" />
+                    <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></div>
+                <div>
+                  <h3>Aplicação prática</h3>
+                  <p>Exercícios e reflexões que conectam teoria bíblica à vida real.</p>
+                </div>
+              </div>
 
-          <div class="experience__item" data-anim="fade-up">
-            <div class="experience__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13ZM20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z" stroke-linejoin="round"/></svg></div>
-            <div><h3>Leitura guiada</h3><p>Acompanhamento passo a passo para nunca se perder nos textos.</p></div>
+              <div class="experience__item" data-anim="fade-up">
+                <div class="experience__item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.5">
+                    <path
+                      d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13ZM20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z"
+                      stroke-linejoin="round" />
+                  </svg></div>
+                <div>
+                  <h3>Leitura guiada</h3>
+                  <p>Acompanhamento passo a passo para nunca se perder nos textos.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ==========================================================================
+    <!-- ==========================================================================
      PLANOS
      ========================================================================== -->
-<section class="pricing u-section" id="planos">
-  <div class="u-container">
-    <div class="u-section-head u-section-head--center" data-anim="fade-up">
-      <span class="u-eyebrow">Planos</span>
-      <h2 class="u-heading-lg">Escolha a forma ideal de começar</h2>
-      <p class="u-lede" style="margin-inline:auto;">Todos os planos dão acesso completo e vitalício ao curso.</p>
-    </div>
+    <section class="pricing u-section" id="planos">
+      <div class="u-container">
+        <div class="u-section-head u-section-head--center" data-anim="fade-up">
+          <span class="u-eyebrow">Planos</span>
+          <h2 class="u-heading-lg">Escolha a forma ideal de começar</h2>
+          <p class="u-lede" style="margin-inline:auto;">Todos os planos dão acesso completo e vitalício ao curso.</p>
+        </div>
 
-    <div class="pricing__grid" data-anim-group="90">
-      <div class="plan card" data-anim="fade-up">
-        <span class="plan__label">Individual</span>
-        <h3 class="plan__name">Parcelado</h3>
-        <div class="plan__price">
-          <span class="plan__price-value">10x R$200</span>
+        <div class="pricing__grid" data-anim-group="90">
+          <div class="plan card" data-anim="fade-up">
+            <span class="plan__label">Individual</span>
+            <h3 class="plan__name">Parcelado</h3>
+            <div class="plan__price">
+              <span class="plan__price-value">10x R$200</span>
+            </div>
+            <div class="plan__features">
+              <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Acesso vitalício ao conteúdo</div>
+              <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Material complementar</div>
+            </div>
+            <a href="https://hotmart.com/pt-br/marketplace/produtos/curso-intensivo-da-biblia-individual-parcelado-em-10x/X106672579I" class="btn btn--ghost btn--block">Comprar pela Hotmart</a>
+          </div>
+
+          <div class="plan card plan--featured" data-anim="fade-up">
+            <span class="plan__badge badge">Mais escolhido</span>
+            <span class="plan__label">Individual</span>
+            <h3 class="plan__name">À Vista</h3>
+            <div class="plan__price">
+              <span class="plan__price-value">R$1.500</span>
+            </div>
+            <div class="plan__features">
+              <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Acesso vitalício ao conteúdo</div>
+              <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                </svg>Material complementar</div>
+              <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Economize em relação ao parcelado</div>
+            </div>
+            <a href="https://hotmart.com/pt-br/marketplace/produtos/curso-intensivo-da-biblia-individual-a-vista/M106674670S" class="btn btn--gold btn--block">Comprar pela Hotmart</a>
+          </div>
+
+          <div class="plan card" data-anim="fade-up">
+            <span class="plan__badge badge">Melhor custo-benefício</span>
+            <span class="plan__label">Casal</span>
+            <h3 class="plan__name">Parcelado</h3>
+            <div class="plan__price">
+              <span class="plan__price-value">10x R$300</span>
+            </div>
+            <div class="plan__features">
+              <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Duas matrículas inclusas</div>
+              <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Acesso vitalício ao conteúdo</div>
+              <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="" />
+                </svg></div>
+            </div>
+            <a href="https://hotmart.com/pt-br/marketplace/produtos/curso-intensivo-da-biblia-casal-parcelado-em-10x/R106674489T" class="btn btn--ghost btn--block">Comprar pela Hotmart</a>
+          </div>
+
+          <div class="plan card" data-anim="fade-up">
+            <span class="plan__badge badge">Economize</span>
+            <span class="plan__label">Casal</span>
+            <h3 class="plan__name">À Vista</h3>
+            <div class="plan__price">
+              <span class="plan__price-value">R$2.500</span>
+            </div>
+            <div class="plan__features">
+              <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Duas matrículas inclusas</div>
+              <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Acesso vitalício ao conteúdo</div>
+              <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Maior economia total</div>
+            </div>
+            <a href="https://hotmart.com/pt-br/marketplace/produtos/casal-a-vista/T106675104K" class="btn btn--ghost btn--block">Comprar pela Hotmart</a>
+          </div>
         </div>
-        <div class="plan__features">
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Acesso vitalício ao conteúdo</div>
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Certificado de conclusão</div>
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Material complementar</div>
-        </div>
-        <a href="#" class="btn btn--ghost btn--block">Comprar pela Hotmart</a>
       </div>
+    </section>
 
-      <div class="plan card plan--featured" data-anim="fade-up">
-        <span class="plan__badge badge">Mais escolhido</span>
-        <span class="plan__label">Individual</span>
-        <h3 class="plan__name">À Vista</h3>
-        <div class="plan__price">
-          <span class="plan__price-value">R$1.500</span>
-        </div>
-        <div class="plan__features">
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Acesso vitalício ao conteúdo</div>
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Certificado de conclusão</div>
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Material complementar</div>
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Economize em relação ao parcelado</div>
-        </div>
-        <a href="#" class="btn btn--gold btn--block">Comprar pela Hotmart</a>
-      </div>
-
-      <div class="plan card" data-anim="fade-up">
-        <span class="plan__badge badge">Melhor custo-benefício</span>
-        <span class="plan__label">Casal</span>
-        <h3 class="plan__name">Parcelado</h3>
-        <div class="plan__price">
-          <span class="plan__price-value">10x R$300</span>
-        </div>
-        <div class="plan__features">
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Duas matrículas inclusas</div>
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Acesso vitalício ao conteúdo</div>
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Certificados individuais</div>
-        </div>
-        <a href="#" class="btn btn--ghost btn--block">Comprar pela Hotmart</a>
-      </div>
-
-      <div class="plan card" data-anim="fade-up">
-        <span class="plan__badge badge">Economize</span>
-        <span class="plan__label">Casal</span>
-        <h3 class="plan__name">À Vista</h3>
-        <div class="plan__price">
-          <span class="plan__price-value">R$2.500</span>
-        </div>
-        <div class="plan__features">
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Duas matrículas inclusas</div>
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Acesso vitalício ao conteúdo</div>
-          <div class="plan__feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>Maior economia total</div>
-        </div>
-        <a href="#" class="btn btn--ghost btn--block">Comprar pela Hotmart</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==========================================================================
+    <!-- ==========================================================================
      FAQ
      ========================================================================== -->
-<section class="faq u-section" id="faq">
-  <div class="u-container">
-    <div class="u-section-head u-section-head--center" data-anim="fade-up">
-      <span class="u-eyebrow">Dúvidas Frequentes</span>
-      <h2 class="u-heading-lg">Perguntas frequentes</h2>
-    </div>
+    <section class="faq u-section" id="faq">
+      <div class="u-container">
+        <div class="u-section-head u-section-head--center" data-anim="fade-up">
+          <span class="u-eyebrow">Dúvidas Frequentes</span>
+          <h2 class="u-heading-lg">Perguntas frequentes</h2>
+        </div>
 
-    <div class="faq__list" data-anim="fade-up">
-      <div class="faq__item">
-        <button class="faq__question" aria-expanded="false">
-          Como acesso o curso após a compra?
-          <span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
-        </button>
-        <div class="faq__answer"><div class="faq__answer-inner"><p>Assim que o pagamento é confirmado, a Hotmart envia por e-mail seu login e senha de acesso à área de membros, onde todo o conteúdo fica disponível.</p></div></div>
+        <div class="faq__list" data-anim="fade-up">
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Como acesso o curso após a compra?
+              <span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" />
+                </svg></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p>Assim que o pagamento é confirmado, a Hotmart envia por e-mail seu login e senha de acesso à área de
+                  membros, onde todo o conteúdo fica disponível.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Por quanto tempo tenho acesso ao conteúdo?
+              <span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" />
+                </svg></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p>O acesso é vitalício. Você pode assistir e revisitar as aulas quantas vezes quiser, no seu próprio
+                  ritmo.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Preciso ter conhecimento prévio da Bíblia para começar?
+              <span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" />
+                </svg></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p>Não. O curso foi desenhado para conduzir o aluno desde os fundamentos até um entendimento profundo,
+                  respeitando cada nível de conhecimento.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              Como funciona a compra pela Hotmart?
+              <span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" />
+                </svg></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p>A Hotmart é a plataforma responsável pelo pagamento seguro e pela liberação automática do acesso ao
+                  curso, aceitando cartão, boleto e Pix.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="faq__item">
-        <button class="faq__question" aria-expanded="false">
-          Recebo certificado ao concluir o curso?
-          <span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
-        </button>
-        <div class="faq__answer"><div class="faq__answer-inner"><p>Sim. Ao concluir todos os módulos, você recebe um certificado digital de conclusão do Curso Intensivo da Bíblia — Método Kairós®.</p></div></div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__question" aria-expanded="false">
-          Por quanto tempo tenho acesso ao conteúdo?
-          <span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
-        </button>
-        <div class="faq__answer"><div class="faq__answer-inner"><p>O acesso é vitalício. Você pode assistir e revisitar as aulas quantas vezes quiser, no seu próprio ritmo.</p></div></div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__question" aria-expanded="false">
-          Preciso ter conhecimento prévio da Bíblia para começar?
-          <span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
-        </button>
-        <div class="faq__answer"><div class="faq__answer-inner"><p>Não. O curso foi desenhado para conduzir o aluno desde os fundamentos até um entendimento profundo, respeitando cada nível de conhecimento.</p></div></div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__question" aria-expanded="false">
-          Como funciona a compra pela Hotmart?
-          <span class="faq__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
-        </button>
-        <div class="faq__answer"><div class="faq__answer-inner"><p>A Hotmart é a plataforma responsável pelo pagamento seguro e pela liberação automática do acesso ao curso, aceitando cartão, boleto e Pix.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==========================================================================
+    <!-- ==========================================================================
      CTA FINAL
      ========================================================================== -->
-<section class="cta-final u-section">
-  <div class="cta-final__glow" aria-hidden="true"></div>
-  <div class="u-container">
-    <div class="cta-final__content" data-anim="scale-in">
-      <span class="u-eyebrow" style="justify-content:center;">Vagas Limitadas</span>
-      <h2 class="u-gold-text">Sua jornada com a Palavra começa agora</h2>
-      <p class="u-lede">Junte-se a milhares de alunos que já transformaram sua relação com as Escrituras através do Método Kairós®.</p>
-      <a href="#planos" class="btn btn--gold">Garantir minha vaga</a>
-    </div>
-  </div>
-</section>
+    <section class="cta-final u-section">
+      <div class="cta-final__glow" aria-hidden="true"></div>
+      <div class="u-container">
+        <div class="cta-final__content" data-anim="scale-in">
+          <span class="u-eyebrow" style="justify-content:center;">Vagas Limitadas</span>
+          <h2 class="u-gold-text">Sua jornada com a Palavra começa agora</h2>
+          <p class="u-lede">Junte-se a milhares de alunos que já transformaram sua relação com as Escrituras através do
+            Método Kairós®.</p>
+          <a href="#planos" class="btn btn--gold">Garantir minha vaga</a>
+        </div>
+      </div>
+    </section>
 
-</main>
+  </main>
 
-<!-- ==========================================================================
+  <!-- ==========================================================================
      FOOTER
      ========================================================================== -->
-<footer class="footer">
-  <div class="u-container">
-    <div class="footer__grid">
-      <div>
-        <div class="footer__brand-mark">Kairós®</div>
-        <p class="footer__desc">Curso Intensivo da Bíblia do Pastor Bartolomeu — conhecimento, interpretação e aplicação profunda das Escrituras.</p>
-        <div class="footer__social">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9.5v5l5-2.5-5-2.5Z" fill="currentColor" stroke="none"/></svg></a>
-          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l1.4-4.1A8 8 0 1 1 9 18.7L4 20Z" stroke-linejoin="round"/></svg></a>
+  <footer class="footer">
+    <div class="u-container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-mark">Kairós®</div>
+          <p class="footer__desc">Curso Intensivo da Bíblia do Pastor Bartolomeu — conhecimento, interpretação e
+            aplicação profunda das Escrituras.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <rect x="2" y="5" width="20" height="14" rx="4" />
+                <path d="M10 9.5v5l5-2.5-5-2.5Z" fill="currentColor" stroke="none" />
+              </svg></a>
+            <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M4 20l1.4-4.1A8 8 0 1 1 9 18.7L4 20Z" stroke-linejoin="round" />
+              </svg></a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Navegação</div>
+          <div class="footer__links">
+            <a href="sobre.html">O Pastor</a>
+            <a href="#metodo">O Método</a>
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="#aprendizado">Conteúdo</a>
+            <a href="#planos">Planos</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Suporte</div>
+          <div class="footer__links">
+            <a href="#faq">Dúvidas Frequentes</a>
+            <a href="#">Contato</a>
+            <a href="#">Central Hotmart</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Legal</div>
+          <div class="footer__links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+          </div>
         </div>
       </div>
 
-      <div>
-        <div class="footer__col-title">Navegação</div>
-        <div class="footer__links">
-          <a href="sobre.html">O Pastor</a>
-          <a href="#metodo">O Método</a>
-          <a href="#como-funciona">Como Funciona</a>
-          <a href="#aprendizado">Conteúdo</a>
-          <a href="#planos">Planos</a>
-        </div>
-      </div>
-
-      <div>
-        <div class="footer__col-title">Suporte</div>
-        <div class="footer__links">
-          <a href="#faq">Dúvidas Frequentes</a>
-          <a href="#">Contato</a>
-          <a href="#">Central Hotmart</a>
-        </div>
-      </div>
-
-      <div>
-        <div class="footer__col-title">Legal</div>
-        <div class="footer__links">
-          <a href="#">Política de Privacidade</a>
-          <a href="#">Termos de Uso</a>
-        </div>
+      <div class="footer__bottom">
+        <span>&copy; <span data-current-year>2026</span> Método Kairós®. Todos os direitos reservados.</span>
+        <span>Desenvolvido com excelência e propósito.</span>
       </div>
     </div>
+  </footer>
 
-    <div class="footer__bottom">
-      <span>&copy; <span data-current-year>2026</span> Método Kairós®. Todos os direitos reservados.</span>
-      <span>Desenvolvido com excelência e propósito.</span>
-    </div>
-  </div>
-</footer>
-
-<script src="/js/animations.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/vendor/three.min.js"></script>
-<script src="/js/bible-3d.js"></script>
+  <script src="/js/animations.js"></script>
+  <script src="/js/main.js"></script>
 </body>
+
 </html>

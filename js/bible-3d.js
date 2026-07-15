@@ -29,15 +29,17 @@
   ).matches;
 
   /* --------------------------------------------------------------------
-   * PALETA — branco, dourado, marfim, bege, bronze
+   * PALETA — dourado quente, âmbar, marfim escuro, bronze profundo
+   * (recalibrada para bater com a referência: cruz radiante e quente,
+   * livro em silhueta escura contra a luz)
    * ------------------------------------------------------------------ */
-  const GOLD_BRIGHT = 0xf6e3b8;
-  const GOLD_MID = 0xd4af6a;
-  const GOLD_DEEP = 0x9c7638;
-  const BRONZE = 0x8a6a42;
-  const IVORY = 0xf7f1e3;
-  const IVORY_SHADOW = 0xe7dcc0;
-  const WHITE_WARM = 0xfffaf0;
+  const GOLD_BRIGHT = 0xfff3d6;   // núcleo quase branco-dourado da luz
+  const GOLD_MID = 0xf6b552;      // dourado quente principal
+  const GOLD_DEEP = 0xd97a2e;     // âmbar/laranja profundo
+  const BRONZE = 0x5a3a1e;        // bronze escuro (livro em silhueta)
+  const IVORY = 0x8a6a42;         // páginas — tom médio, não estoura pra branco
+  const IVORY_SHADOW = 0x3c2a16;  // sombra das páginas / pergaminho
+  const WHITE_WARM = 0xfff6e5;
 
   /* --------------------------------------------------------------------
    * RENDERER — fundo transparente, sombras suaves habilitadas
@@ -51,7 +53,7 @@
   renderer.setClearColor(0x000000, 0);
   renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.15;
+  renderer.toneMappingExposure = 0.92;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   container.appendChild(renderer.domElement);
@@ -132,29 +134,31 @@
   pageTexture.wrapS = pageTexture.wrapT = THREE.ClampToEdgeWrapping;
 
   /* --------------------------------------------------------------------
-   * LUZES — composição em camadas para efeito cinematográfico
+   * LUZES — mais escuras e quentes, deixando a cruz ser o único ponto
+   * realmente brilhante (como na referência: tudo em volta é sombra
+   * quente, só a cruz e o feixe estouram pra claro)
    * ------------------------------------------------------------------ */
-  const ambient = new THREE.AmbientLight(0x3a3226, 1.2);
+  const ambient = new THREE.AmbientLight(0x2a1c10, 0.9);
   scene.add(ambient);
 
-  // Luz-chave: feixe celestial vindo de cima, projeta sombra suave
-  const keyLight = new THREE.SpotLight(WHITE_WARM, 55, 14, Math.PI / 6, 0.5, 1.4);
-  keyLight.position.set(0.6, 5.5, 2.2);
-  keyLight.target.position.set(0, 0, 0);
+  // Luz-chave: vem de trás/cima da cruz, projeta sombra suave no livro
+  const keyLight = new THREE.SpotLight(GOLD_MID, 18, 14, Math.PI / 5, 0.6, 1.6);
+  keyLight.position.set(0.4, 3.6, 1.6);
+  keyLight.target.position.set(0, -0.4, 0.6);
   keyLight.castShadow = true;
   keyLight.shadow.mapSize.set(1024, 1024);
-  keyLight.shadow.radius = 6;
+  keyLight.shadow.radius = 8;
   keyLight.shadow.bias = -0.0015;
   scene.add(keyLight, keyLight.target);
 
-  // Luz de preenchimento dourada, suave, sem sombra
-  const fillLight = new THREE.PointLight(GOLD_MID, 12, 12, 2);
-  fillLight.position.set(-2.4, 0.6, 2.8);
+  // Luz de preenchimento âmbar, bem discreta — só pra não perder detalhe total nas sombras
+  const fillLight = new THREE.PointLight(GOLD_DEEP, 3.5, 10, 2);
+  fillLight.position.set(-1.8, -0.2, 2.4);
   scene.add(fillLight);
 
-  // Luz de contorno (rim light) atrás, realça a cruz
-  const rimLight = new THREE.PointLight(GOLD_BRIGHT, 18, 14, 2);
-  rimLight.position.set(0, 1.6, -3);
+  // Luz de contorno atrás do livro, sugere o brilho vindo da cruz
+  const rimLight = new THREE.PointLight(GOLD_BRIGHT, 3, 8, 2);
+  rimLight.position.set(0.2, 0.3, -0.6);
   scene.add(rimLight);
 
   /* --------------------------------------------------------------------
@@ -169,12 +173,12 @@
       map: glowTexture,
       color: GOLD_BRIGHT,
       transparent: true,
-      opacity: 0.5,
+      opacity: 0.32,
       depthWrite: false,
       blending: THREE.AdditiveBlending,
     })
   );
-  presenceGlow.scale.set(7, 7, 1);
+  presenceGlow.scale.set(4.2, 4.2, 1);
   presenceGlow.position.set(0, 0.6, -2.4);
   mainGroup.add(presenceGlow);
 
@@ -207,57 +211,65 @@
   mainGroup.add(crossGroup);
 
   /* --------------------------------------------------------------------
-   * BÍBLIA ABERTA — duas páginas curvas + lombada dourada
+   * BÍBLIA ABERTA — pivô correto na lombada, ângulo de abertura real,
+   * deitada como na referência (vista de cima/frente, em silhueta contra
+   * a luz da cruz)
    * ------------------------------------------------------------------ */
   const bookGroup = new THREE.Group();
 
   function buildPage(mirror) {
-    const geo = new THREE.PlaneGeometry(1.55, 2.05, 32, 32);
+    const width = 1.35;
+    const height = 1.85;
+    const geo = new THREE.PlaneGeometry(width, height, 24, 24);
+    // desloca a geometria pra que a borda esquerda (x=0) seja a lombada —
+    // é esse o pivô que faltava antes, e por isso as páginas viravam
+    // uma parede só em vez de abrir em "V"
+    geo.translate(width / 2, 0, 0);
+
     const pos = geo.attributes.position;
     for (let i = 0; i < pos.count; i++) {
       const x = pos.getX(i);
       const y = pos.getY(i);
-      // curvatura suave da página (mais alta perto da lombada, caindo nas bordas)
-      const t = x / 1.55; // 0 (lombada) → 0.5 (borda externa)
-      const curve = Math.sin(t * Math.PI * 0.5) * 0.22;
-      const pageWave = Math.sin(y * 1.4) * 0.008; // ondulação sutil do papel
-      pos.setZ(i, curve + pageWave);
+      const t = x / width; // 0 (lombada) → 1 (borda externa)
+      const sag = Math.sin(t * Math.PI * 0.5) * 0.05; // leve caimento do papel
+      const pageWave = Math.sin(y * 2.2 + x * 3) * 0.004;
+      pos.setZ(i, -sag + pageWave);
     }
     geo.computeVertexNormals();
 
     const mat = new THREE.MeshPhysicalMaterial({
       map: pageTexture,
       color: IVORY,
-      roughness: 0.55,
+      roughness: 0.65,
       metalness: 0,
-      clearcoat: 0.15,
-      clearcoatRoughness: 0.6,
-      transmission: 0.06,
-      thickness: 0.4,
-      emissive: new THREE.Color(GOLD_MID),
-      emissiveIntensity: 0.1,
+      clearcoat: 0.1,
+      clearcoatRoughness: 0.7,
+      emissive: new THREE.Color(GOLD_DEEP),
+      emissiveIntensity: 0.06,
     });
 
     const page = new THREE.Mesh(geo, mat);
     page.receiveShadow = true;
     page.castShadow = true;
-    page.position.x = mirror ? 0.02 : -0.02;
-    page.rotation.y = mirror ? -0.06 : 0.06;
+    // ângulo real de abertura de um livro — cada página gira ~30° pra fora
+    page.rotation.y = mirror ? -0.52 : 0.52;
     if (mirror) page.scale.x = -1;
     return page;
   }
 
   const pageLeft = buildPage(false);
   const pageRight = buildPage(true);
-  pageLeft.position.set(-0.78, -0.1, 0);
-  pageRight.position.set(0.78, -0.1, 0);
+  // ambas nascem da mesma lombada (x=0 local), sem deslocamento extra em x
+  pageLeft.position.set(0, 0, 0);
+  pageRight.position.set(0, 0, 0);
   bookGroup.add(pageLeft, pageRight);
 
   // Lombada / capa dourada (CapsuleGeometry não existe nesta versão do
   // Three.js — usamos um cilindro com tampas arredondadas simuladas)
   const spineGeo = typeof THREE.CapsuleGeometry === "function"
-    ? new THREE.CapsuleGeometry(0.05, 2.0, 4, 12)
-    : new THREE.CylinderGeometry(0.05, 0.05, 2.0, 16);
+    ? new THREE.CapsuleGeometry(0.035, height_spine(), 4, 12)
+    : new THREE.CylinderGeometry(0.035, 0.035, height_spine(), 16);
+  function height_spine() { return 1.85; }
   const spine = new THREE.Mesh(
     spineGeo,
     new THREE.MeshPhysicalMaterial({
@@ -267,30 +279,33 @@
       clearcoat: 0.7,
       clearcoatRoughness: 0.2,
       emissive: new THREE.Color(GOLD_DEEP),
-      emissiveIntensity: 0.15,
+      emissiveIntensity: 0.2,
     })
   );
   spine.rotation.z = Math.PI / 2;
-  spine.position.set(0, -0.1, -0.05);
+  spine.position.set(0, 0, -0.02);
   spine.castShadow = true;
   bookGroup.add(spine);
 
   // Capa traseira (base sob as páginas, sugere espessura do livro)
   const coverBack = new THREE.Mesh(
-    new THREE.BoxGeometry(1.62, 0.06, 2.1),
+    new THREE.BoxGeometry(2.85, 0.045, 1.9),
     new THREE.MeshPhysicalMaterial({
       color: BRONZE,
-      metalness: 0.7,
-      roughness: 0.4,
-      clearcoat: 0.4,
+      metalness: 0.6,
+      roughness: 0.5,
+      clearcoat: 0.3,
     })
   );
-  coverBack.position.set(0, -0.32, 0);
+  coverBack.position.set(0, -0.06, 0);
   coverBack.receiveShadow = true;
   coverBack.castShadow = true;
   bookGroup.add(coverBack);
 
-  bookGroup.position.set(0, -0.15, 0.4);
+  // o livro "deita" — inclinado como se estivesse apoiado numa superfície,
+  // visto de um ângulo elevado, igual à referência
+  bookGroup.rotation.x = -1.15;
+  bookGroup.position.set(0, -0.85, 0.9);
   mainGroup.add(bookGroup);
 
   /* Luz suave saindo de dentro do livro (páginas "emitindo luz dourada") */
@@ -307,7 +322,7 @@
     new THREE.MeshBasicMaterial({
       map: beamTexture,
       transparent: true,
-      opacity: 0.4,
+      opacity: 0.28,
       blending: THREE.AdditiveBlending,
       depthWrite: false,
       side: THREE.DoubleSide,

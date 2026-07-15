@@ -97,7 +97,7 @@
   position: absolute;
   bottom: var(--space-lg);
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 2em);
   display: flex;
   flex-direction: column;
   align-items: center;
