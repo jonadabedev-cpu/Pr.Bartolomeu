@@ -1,0 +1,25 @@
+/* ========================= */
+/* WHATSAPP FLUTUANTE        */
+/* ========================= */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  width: 58px; height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+  z-index: 9000;
+  transition: transform var(--transition), box-shadow var(--transition);
+  animation: waPulse 2.5s ease-in-out infinite;
+}
+.whatsapp-float:hover { transform: scale(1.12); box-shadow: 0 14px 36px rgba(37,211,102,0.55); }
+
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.3); }
+  50%       { box-shadow: 0 8px 24px rgba(37,211,102,0.45), 0 0 0 14px rgba(37,211,102,0); }
+}

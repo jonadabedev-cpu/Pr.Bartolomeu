@@ -35,14 +35,6 @@ p { color: var(--text-secondary); }
   color: var(--text-gold);
 }
 
-.u-eyebrow::before {
-  content: "";
-  width: 24px;
-  height: 1px;
-  background: var(--grad-gold);
-  display: inline-block;
-}
-
 .u-heading-xl {
   font-size: var(--fs-display-xl);
   font-family: var(--font-display);
